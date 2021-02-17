@@ -21,5 +21,3 @@ Execution :
 Il est possible de lister tous les films d'un autre genre :
 
 	java -jar GiveMeMovies.jar "path_to_file" action
-	
-Code source disponible dans canal-plus-project
