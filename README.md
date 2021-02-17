@@ -8,7 +8,7 @@
 		
 Desription :
 
-	Appliation listant les titres originaux depuis un fichier TSV (récupéré depuis imdb) en fonction du genre, dans ce cas, comedy.
+	Application listant les titres originaux depuis un fichier TSV (récupéré depuis imdb) en fonction du genre, dans ce cas, comedy.
 	
 Pré-requis :
 
