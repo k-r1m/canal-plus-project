@@ -1,0 +1,17 @@
+logs
+bin
+project/project
+project/target
+target
+null
+out
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+.idea/
+**/*/.metals
+.metals
+**/*/.idea
