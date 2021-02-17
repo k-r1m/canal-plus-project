@@ -7,6 +7,6 @@ case class TitleMovies(tconst: String,
                        isAdult: Boolean,
                        startYear: String,
                        endYear: Int,
-                       runtimeMinutes:  String,
+                       runtimeMinutes: String,
                        genres: Seq[String]
                       )

@@ -1,4 +1,4 @@
-name := "GiveMeComedyMovies"
+name := "GiveMeMovies"
 
 version := "0.1"
 
@@ -13,4 +13,4 @@ libraryDependencies ++= Seq(
 
 scalaVersion := "2.13.4"
 
-mainClass := Some("main.scala.GiveMeComedyMovies")
+mainClass := Some("main.scala.GiveMeMovies")

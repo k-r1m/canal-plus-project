@@ -1,4 +1,4 @@
-package main.scala
+package services
 
 import akka.actor.{ActorRef, ActorSystem}
 import com.newmotion.akka.rabbitmq._
@@ -16,6 +16,7 @@ object PublishSubscribeMoviesChannel {
     val queue = channel.queueDeclare().getQueue
     channel.queueBind(queue, exchange, "")
   }
+
   connection ! CreateChannel(ChannelActor.props(setupPublisher), Some("publish-movies"))
 
   def setupSubscriber(channel: Channel, self: ActorRef) {
@@ -29,8 +30,10 @@ object PublishSubscribeMoviesChannel {
     }
     channel.basicConsume(queue, true, consumer)
   }
+
   connection ! CreateChannel(ChannelActor.props(setupSubscriber), Some("subscribe-movies"))
 
   def fromBytes(x: Array[Byte]) = new String(x, "UTF-8")
+
   def toBytes(x: Long) = x.toString.getBytes("UTF-8")
 }

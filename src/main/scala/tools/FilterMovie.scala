@@ -2,13 +2,13 @@ package tools
 
 import models.TitleMovies
 
-object GiveMeMovieByGenre {
+case class FilterMovie(typeOfTitle: String = "movie", genre: String) {
   def byCustomGenre(genre: String, titleMovies: Seq[TitleMovies]): Seq[TitleMovies] = {
-    titleMovies.filter(tm => tm.titleType.equals("movie") && tm.genres.map(_.toLowerCase).contains(genre))
+    titleMovies.filter(tm => tm.titleType.equals(typeOfTitle) && tm.genres.map(_.toLowerCase).contains(genre))
   }
 
   def byMultipleGenres(genre1: String, genre2: String, titleMovies: Seq[TitleMovies]): Seq[TitleMovies] = {
-    titleMovies.filter(tm => tm.titleType.equals("movie") && tm.genres.map(_.toLowerCase).forall(Seq(genre1, genre2).contains))
+    titleMovies.filter(tm => tm.titleType.equals(typeOfTitle) && tm.genres.map(_.toLowerCase).forall(Seq(genre1, genre2).contains))
   }
 
   def byComedy(titleMovies: Seq[TitleMovies]): Seq[TitleMovies] = {
